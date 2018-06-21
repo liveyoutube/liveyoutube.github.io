@@ -24,6 +24,7 @@
 	height:40px;
 	border-radius:5px;
 	font-size: 20px;
+	font-weight:bold;
 	
 	}
 	#sbtn{
@@ -143,9 +144,11 @@ cursor:pointer;
 #likes{
 	color:green;
 	font-weight: bold;
+	font-size:28px;
 }
 #dislikes{
 	color:red;
+	font-size:28px;
 	font-weight: bold;
 }
 #viewcount{

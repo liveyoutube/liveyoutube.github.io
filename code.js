@@ -5,9 +5,12 @@ var DATA;
 $("document").ready(function(){
 	$(".LIVEVIDEOSTATS").hide();
 	$(".LIVECHANNELSTATS").hide();
+	$("#loading").hide();
 	$("#cut").click(()=>{$(".LIVEVIDEOSTATS").hide();cleardata();
 		$('#cut').click(function(){
 	$('#id_videothumbnail')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+	$("#loading").show();
+	$("#id_videothumbnail").hide();
 });
 
 	});

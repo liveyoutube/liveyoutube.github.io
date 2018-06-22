@@ -91,7 +91,7 @@ if(toshow){
 document.getElementById("id_videothumbnail").setAttribute("src","https://www.youtube.com/embed/"+vdata.items[0].id);
 
 }	
-i++;
+
 document.getElementById("viewcount").innerHTML=numberWithCommas(vdata.items[0].statistics.viewCount)+" views";
 document.getElementById("id_videotitle").innerHTML=vdata.items[0].snippet.title;
 document.getElementById("likes").innerHTML=numberWithCommas(vdata.items[0].statistics.likeCount);

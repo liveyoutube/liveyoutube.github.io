@@ -88,8 +88,11 @@ function viewstats(id,type){
 
 function showvideolive(vdata,id,toshow){
 if(toshow){
+
 document.getElementById("id_videothumbnail").setAttribute("src","https://www.youtube.com/embed/"+vdata.items[0].id+"?enablejsapi=1&version=3&playerapiid=ytplayer");
 
+$("#loading").hide();
+$("#id_videothumbnail").show();
 }	
 
 document.getElementById("viewcount").innerHTML=numberWithCommas(vdata.items[0].statistics.viewCount)+" views";

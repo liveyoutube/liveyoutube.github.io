@@ -5,7 +5,12 @@ var DATA;
 $("document").ready(function(){
 	$(".LIVEVIDEOSTATS").hide();
 	$(".LIVECHANNELSTATS").hide();
-	$("#cut").click(()=>{$(".LIVEVIDEOSTATS").hide();cleardata()});
+	$("#cut").click(()=>{$(".LIVEVIDEOSTATS").hide();cleardata();
+		$('#cut').click(function(){
+	$('#id_videothumbnail')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+});
+
+	});
 	$("#cutchannel").click(()=>{$(".LIVECHANNELSTATS").hide();cleardata()});
 
  initialstring="https://www.googleapis.com/youtube/v3/search?part=snippet&&maxResults=15&q=";

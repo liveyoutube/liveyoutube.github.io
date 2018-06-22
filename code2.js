@@ -88,7 +88,7 @@ function viewstats(id,type){
 
 function showvideolive(vdata,id,toshow){
 if(toshow){
-document.getElementById("id_videothumbnail").setAttribute("src","https://www.youtube.com/embed/"+vdata.items[0].id);
+document.getElementById("id_videothumbnail").setAttribute("src","https://www.youtube.com/embed/"+vdata.items[0].id+"?enablejsapi=1&version=3&playerapiid=ytplayer");
 
 }	
 
@@ -126,3 +126,17 @@ else{
 function change(){
 document.getElementsByTagName("body")
 }
+
+
+
+// $('a.play-video').click(function(){
+// 	$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+// });
+
+// $('a.stop-video').click(function(){
+// 	$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+// });
+
+// $('a.pause-video').click(function(){
+// 	$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+// });

@@ -56,7 +56,7 @@ function viewstats(id,type){
 	if(type=='video'){
 		$.get(videoinitial+ids[id-1]+laststring,function(videodata){
 			$(".LIVEVIDEOSTATS").show();
-			showvideolive(videodata,id);
+			showvideolive(videodata,id,true);
 			document.getElementById("licon").style.display="block";
 			document.getElementById("disicon").style.display="block";
 			
@@ -86,15 +86,19 @@ function viewstats(id,type){
 
 
 
-function showvideolive(vdata,id){
+function showvideolive(vdata,id,toshow){
+if(toshow){
 document.getElementById("id_videothumbnail").setAttribute("src","https://www.youtube.com/embed/"+vdata.items[0].id);
+
+}	
+i++;
 document.getElementById("viewcount").innerHTML=numberWithCommas(vdata.items[0].statistics.viewCount)+" views";
 document.getElementById("id_videotitle").innerHTML=vdata.items[0].snippet.title;
 document.getElementById("likes").innerHTML=numberWithCommas(vdata.items[0].statistics.likeCount);
 document.getElementById("dislikes").innerHTML=numberWithCommas(vdata.items[0].statistics.dislikeCount);
 document.getElementById("comments").innerHTML="Comments "+numberWithCommas(vdata.items[0].statistics.commentCount);
 if(document.getElementsByClassName("LIVEVIDEOSTATS")[0].style.display==""){
-	$.get(videoinitial+ids[id-1]+laststring,function(vdata){showvideolive(vdata,id);});
+	$.get(videoinitial+ids[id-1]+laststring,function(vdata){showvideolive(vdata,id,false);});
 }
 else{
 	return;

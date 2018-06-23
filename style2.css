@@ -60,11 +60,11 @@
 	}
 	@keyframes come{
 		from{
-			width:1%;
+			top:100%;
 
 		}
 		to{
-			width:70%;
+			top:40%;
 		}
 	}
 	#info_title{

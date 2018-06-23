@@ -104,7 +104,7 @@ cursor:pointer;
 	position: fixed;
 	padding:20px;
 	background-color: rgba(220,220,220,1);
-	top:20%;
+	top:15%;
 	left:14%;
 	box-shadow: 9px 9px 5px gray;
 	width:75%;
@@ -139,13 +139,18 @@ text-align: center;
 }
 #dislikes{
 	color:red;
+	text-align:right;
 }
 #viewcount{
 	text-align: center;
 	vertical-align: center;
 }
-#licon,#disicon{
+#licon{
 	font-size: 45px;
+}
+#disicon{
+	font-size:45px;
+	text-align:right;
 }
 #cut,#cutchannel{
 	position: absolute;
@@ -163,7 +168,7 @@ text-align: center;
 	position: fixed;
 	padding:20px;
 	background-color: rgba(220,220,220,1);
-	top:25%;
+	top:20%;
 	left:15%;
 	box-shadow: 9px 9px 5px grey;
 	width:75%;

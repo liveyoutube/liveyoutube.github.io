@@ -47,7 +47,7 @@ Powered by Google's Powerful YouTube API.Just like Social Blade">
 	<div id="info_title">Get Realtime YouTube Statistics</div>
 	<h3>Just type in the keyword you want to search and the YouTube API does the work for you.</h3>
 	<h3>You can check realtime video views and real time Subscriber count </h3>
-	<h2 id="client_name"></h2>
+	<h2 id="client_name"style="color:green,font-weight:bold"></h2>
 </div>
 
 <!-- Search Page-->
@@ -191,7 +191,7 @@ Powered by Google's Powerful YouTube API.Just like Social Blade">
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  document.getElementById('client_name').innerHTML=profile.getName();
+  document.getElementById('client_name').innerHTML="Welcome "+profile.getName();
 }
 
 		
